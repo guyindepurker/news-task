@@ -1,0 +1,16 @@
+@import 'styles/main.scss';
+
+.container {
+    .card {
+        max-width: 500px;
+    }
+    .footer {
+        display:flex;
+        gap: 5px;
+        flex-direction:column;
+        // align-items: center;
+        .bold {
+            font-weight: 800;
+        }
+    }
+}

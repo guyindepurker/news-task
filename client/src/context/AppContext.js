@@ -26,16 +26,20 @@ export const AppProvider = ({ children }) => {
     if (!token) {
       return;
     }
-    const { data } = await httpService.post('/auto-login', { token });
-    const { user } = data.data;
-    httpService.interceptors.request.use(
-      (request) => {
-        request.headers['Authorization'] = `Bearer ${token}`;
-        return request;
-      },
-      (error) => Promise.reject(error)
-    );
-    onSetUser(user);
+    try {
+      const { data } = await httpService.post('/auto-login', { token });
+      const { user } = data.data;
+      httpService.interceptors.request.use(
+        (request) => {
+          request.headers['Authorization'] = `Bearer ${token}`;
+          return request;
+        },
+        (error) => Promise.reject(error)
+      );
+      onSetUser(user);
+    } catch (err) {
+      console.error(err);
+    }
   }, []);
 
   useEffect(() => {

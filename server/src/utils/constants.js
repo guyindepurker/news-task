@@ -10,9 +10,12 @@ const baseUrlApiNews = `http://newsapi.org/v2/everything?language=en&pageSize=10
 
 const SOURCE = 'bbc-news';
 
+const clientBuild = path.join(__dirname, '../', '../', '../', 'client/build');
+
 module.exports = {
   basePathServer,
   API_PREFIX,
   baseUrlApiNews,
   SOURCE,
+  clientBuild,
 };

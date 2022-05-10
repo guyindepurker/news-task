@@ -1,14 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-
+const path = require('path');
 const appRouter = require('./routes');
+const { clientBuild } = require('./utils/constants');
 
 const app = express();
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve(__dirname, 'public')));
+  app.use(express.static(path.resolve(clientBuild)));
   app.get('/**', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(clientBuild, 'index.html'));
   });
 } else {
   const corsOptions = {

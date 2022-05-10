@@ -31,7 +31,8 @@ const News = (props) => {
 
   return (
     <div className={classes['container']}>
-      <Button onClick={loadNews} label="Load" loading={loading}></Button>
+      <h1>Last News</h1>
+      <Button className={classes['button']} onClick={loadNews} label="Load" loading={loading}></Button>
       {newsList.length > 0 && newsList.map(news => <NewsList key={news._id} articles={news.articles} />)}
     </div>
   );

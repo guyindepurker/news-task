@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
 
 import { useAppContext } from '../../context/AppContext';
-
-import { httpService } from '../../service/httpService';
-import classes from './Login.module.scss';
 import { LocalStorageService } from '../../service/localStorageService';
-import { history } from '../../utils/history';
-import { useNavigate } from 'react-router-dom';
+import { httpService } from '../../service/httpService';
+
+import classes from './Login.module.scss';
 
 
 const Login = (props) => {
@@ -18,14 +17,12 @@ const Login = (props) => {
 
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
     if (!userName || !password) {
-      setError(true);
       return;
     }
     setLoading(true);
@@ -41,11 +38,9 @@ const Login = (props) => {
       setUser(user);
       setLoading(false)
       navigate('/news', { replace: true });
-      console.log('navigate  called');
     } catch (err) {
       console.log('error', err);
       setLoading(false)
-      setError(true)
     }
 
   }

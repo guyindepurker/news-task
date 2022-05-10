@@ -12,8 +12,9 @@
 /build
 _templates
 .idea
-
-
+*/logs/*
+logs/
+logs
 # misc
 .DS_Store
 .env.local

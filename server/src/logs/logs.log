@@ -111,3 +111,6 @@
 {"level":"info","message":"Server is listening on port 3030","timestamp":"2022-05-10T20:03:34.784Z"}
 {"level":"info","message":"MongoDB connection established successfully","timestamp":"2022-05-10T20:03:34.807Z"}
 {"level":"info","message":"USER CREATED successfully","timestamp":"2022-05-10T20:03:35.178Z"}
+{"level":"info","message":"Server is listening on port 3030","timestamp":"2022-05-10T20:35:21.851Z"}
+{"level":"info","message":"MongoDB connection established successfully","timestamp":"2022-05-10T20:35:21.880Z"}
+{"level":"info","message":"USER CREATED successfully","timestamp":"2022-05-10T20:35:22.222Z"}

@@ -1,6 +1,13 @@
 # news-task
 Clone the project and you will need a mongodb installed in your local computer.
 
+#### Credentials
+To login to the news page fill the next credentials:
+```bash
+userName: admin
+password: 1234
+```
+
 ## Server
 
 First of all install all the dependencies:
@@ -40,11 +47,6 @@ Build step:
 
 *right now you can run the server in prod mode*
 
-#### Credentials
-To login to the news page fill the next credentials:
-```bash
-userName: admin
-password: 1234
-```
+
 
 
